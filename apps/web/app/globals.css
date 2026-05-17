@@ -3,6 +3,8 @@
 @tailwind utilities;
 
 :root {
+  --font-serif: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  --font-sans: "Avenir Next", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   --background: 36 27% 97%;
   --foreground: 26 18% 16%;
   --surface: 36 24% 95%;
@@ -37,4 +39,3 @@ body {
 ::selection {
   background: rgba(95, 72, 52, 0.16);
 }
-

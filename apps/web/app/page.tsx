@@ -25,6 +25,9 @@ export default function LandingPage() {
               <Button href="/dashboard" variant="secondary" className="px-6">
                 Enter the room
               </Button>
+              <Button href="/lab" variant="secondary" className="px-6">
+                Open testing lab
+              </Button>
             </div>
           </div>
 

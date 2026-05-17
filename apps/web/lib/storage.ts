@@ -66,8 +66,16 @@ export function saveProfile(profile: ReflectionProfile) {
 }
 
 export function getEntries(): JournalEntry[] {
-  const entries = readJson<JournalEntry[]>(ENTRIES_KEY, []);
-  return entries.length > 0 ? entries : seedEntries;
+  if (!isBrowser()) return seedEntries;
+
+  const raw = window.localStorage.getItem(ENTRIES_KEY);
+  if (raw === null) return seedEntries;
+
+  try {
+    return JSON.parse(raw) as JournalEntry[];
+  } catch {
+    return seedEntries;
+  }
 }
 
 export function saveEntries(entries: JournalEntry[]) {
@@ -96,6 +104,14 @@ export function refreshWeeklySummary(entries: JournalEntry[]) {
   return summary;
 }
 
+export function clearReflectionStorage() {
+  if (!isBrowser()) return;
+
+  window.localStorage.removeItem(PROFILE_KEY);
+  window.localStorage.setItem(ENTRIES_KEY, JSON.stringify([]));
+  window.localStorage.removeItem(WEEKLY_KEY);
+}
+
 export function createReflectionFromEntry(entryContent: string, profile: ReflectionProfile, entries: JournalEntry[]) {
   return buildReflectionResponse({
     entryContent,
@@ -103,4 +119,3 @@ export function createReflectionFromEntry(entryContent: string, profile: Reflect
     recentEntries: entries.slice(0, 4)
   });
 }
-

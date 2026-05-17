@@ -46,6 +46,9 @@ export function Dashboard() {
             <Button href="/timeline" variant="secondary" className="px-6">
               Open timeline
             </Button>
+            <Button href="/lab" variant="secondary" className="px-6">
+              Open testing lab
+            </Button>
           </div>
           <div className="text-sm text-[hsl(var(--muted-foreground))]">
             {profile.intent ? `You came here to ${profile.intent}.` : "Your preferences are ready when you are."}

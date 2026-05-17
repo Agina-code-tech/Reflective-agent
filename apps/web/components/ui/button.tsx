@@ -7,7 +7,7 @@ const base =
 type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   children: ReactNode;
   variant?: "primary" | "secondary" | "ghost";
-  href?: string;
+  href?: React.ComponentProps<typeof Link>["href"];
 };
 
 export function Button({ children, variant = "primary", className = "", href, ...props }: ButtonProps) {
