@@ -11,8 +11,10 @@
     <link rel="stylesheet" href="/ui.css" />
   </head>
   <body>
+    <div class="cursor-light" aria-hidden="true"></div>
     <div class="ambient ambient-a" aria-hidden="true"></div>
     <div class="ambient ambient-b" aria-hidden="true"></div>
+    <div class="particles" aria-hidden="true"></div>
     <div class="page-shell">
       <header class="topbar">
         <div class="brand">
@@ -26,11 +28,19 @@
           <a href="#compose">Compose</a>
           <a href="#timeline">Timeline</a>
           <a href="#weekly">Weekly</a>
+          <button class="mode-switch" type="button" data-focus-toggle>Focus mode</button>
         </nav>
       </header>
 
+      <aside class="floating-nav" aria-label="Quick navigation">
+        <a class="floating-nav-item is-active" href="#hero">01</a>
+        <a class="floating-nav-item" href="#compose">02</a>
+        <a class="floating-nav-item" href="#timeline">03</a>
+        <a class="floating-nav-item" href="#weekly">04</a>
+      </aside>
+
       <main class="layout">
-        <section class="hero card">
+        <section class="hero card reveal" id="hero">
           <div class="hero-copy">
             <p class="kicker">Quiet intelligence</p>
             <h1>A reflective environment for emotional clarity and narrative continuity.</h1>
@@ -45,6 +55,11 @@
             <div class="hero-note">
               <span>Designed for</span>
               <strong>continuity over intensity</strong>
+            </div>
+            <div class="hero-orbit" aria-hidden="true">
+              <span class="orbit orb-green"></span>
+              <span class="orbit orb-purple"></span>
+              <span class="orbit orb-warm"></span>
             </div>
           </div>
 
@@ -67,7 +82,7 @@
         </section>
 
         <section class="grid-two">
-          <article class="card compose" id="compose">
+          <article class="card compose reveal" id="compose">
             <div class="section-head">
               <div>
                 <p class="kicker">Reflection composer</p>
@@ -98,7 +113,7 @@
           </article>
 
           <aside class="stack">
-            <article class="card response">
+            <article class="card response reveal">
               <p class="kicker">Reflection response</p>
               <div class="response-block">
                 <span>Reflection</span>
@@ -114,7 +129,7 @@
               </div>
             </article>
 
-            <article class="card stats">
+            <article class="card stats reveal">
               <div>
                 <span class="stat-label">Mood</span>
                 <strong>Uncertain</strong>
@@ -131,7 +146,7 @@
           </aside>
         </section>
 
-        <section class="card timeline" id="timeline">
+        <section class="card timeline reveal" id="timeline">
           <div class="section-head">
             <div>
               <p class="kicker">Reflection timeline</p>
@@ -141,7 +156,7 @@
           </div>
 
           <div class="timeline-list">
-            <article class="timeline-item">
+            <article class="timeline-item is-active">
               <div class="timeline-meta">
                 <span>Apr 28</span>
                 <span>Chapter 4</span>
@@ -167,7 +182,7 @@
           </div>
         </section>
 
-        <section class="card weekly" id="weekly">
+        <section class="card weekly reveal" id="weekly">
           <div class="section-head">
             <div>
               <p class="kicker">Weekly synthesis</p>
@@ -196,5 +211,6 @@
         </section>
       </main>
     </div>
+    <script src="/ui.js" defer></script>
   </body>
 </html>
