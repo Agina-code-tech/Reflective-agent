@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Reflective Memory Loop UI</title>
+    <meta
+      name="description"
+      content="A calm reflective interface for writing, continuity, and weekly synthesis."
+    />
+    <link rel="stylesheet" href="/ui.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand">
+          <span class="brand-mark"></span>
+          <div>
+            <div class="eyebrow">Reflective Memory Loop</div>
+            <div class="brand-title">A calm UI for reflection.</div>
+          </div>
+        </div>
+        <nav class="topnav" aria-label="Primary">
+          <a href="#compose">Compose</a>
+          <a href="#timeline">Timeline</a>
+          <a href="#weekly">Weekly</a>
+        </nav>
+      </header>
+
+      <main class="layout">
+        <section class="hero card">
+          <div class="hero-copy">
+            <p class="kicker">Quiet intelligence</p>
+            <h1>A reflective environment for emotional clarity and narrative continuity.</h1>
+            <p class="lede">
+              Externalize thought, revisit previous entries, and notice recurring patterns without turning
+              reflection into a chat loop.
+            </p>
+            <div class="actions">
+              <a class="button button-primary" href="#compose">Begin reflection</a>
+              <a class="button button-secondary" href="#weekly">View weekly synthesis</a>
+            </div>
+          </div>
+
+          <aside class="hero-aside">
+            <div class="panel">
+              <span class="panel-label">Current tone</span>
+              <strong>Gentle</strong>
+              <p>Spacious, observational, non-clinical.</p>
+            </div>
+            <div class="panel">
+              <span class="panel-label">Continuity</span>
+              <strong>Longitudinal</strong>
+              <p>Entries become chapters, not isolated moments.</p>
+            </div>
+          </aside>
+        </section>
+
+        <section class="grid-two">
+          <article class="card compose" id="compose">
+            <div class="section-head">
+              <div>
+                <p class="kicker">Reflection composer</p>
+                <h2>Write without having to perform.</h2>
+              </div>
+              <span class="status">Autosaving draft</span>
+            </div>
+
+            <label class="sr-only" for="reflection-entry">Journal entry</label>
+            <textarea
+              id="reflection-entry"
+              class="composer"
+              placeholder="What feels worth placing into words today?"
+            ></textarea>
+
+            <div class="composer-footer">
+              <div class="tags">
+                <span class="tag active">gentle</span>
+                <span class="tag">analytical</span>
+                <span class="tag">exploratory</span>
+                <span class="tag">concise</span>
+              </div>
+              <button class="button button-primary" type="button">Generate reflection</button>
+            </div>
+          </article>
+
+          <aside class="stack">
+            <article class="card response">
+              <p class="kicker">Reflection response</p>
+              <div class="response-block">
+                <span>Reflection</span>
+                <p>Gently, this entry feels like a place where meaning is still forming.</p>
+              </div>
+              <div class="response-block">
+                <span>Observed Pattern</span>
+                <p>A recurring tension appears between responsibility and exhaustion.</p>
+              </div>
+              <div class="response-block">
+                <span>Reflective Question</span>
+                <p>What would become clearer if this were given a little more room?</p>
+              </div>
+            </article>
+
+            <article class="card stats">
+              <div>
+                <span class="stat-label">Mood</span>
+                <strong>Uncertain</strong>
+              </div>
+              <div>
+                <span class="stat-label">Recent entries</span>
+                <strong>07</strong>
+              </div>
+              <div>
+                <span class="stat-label">Weekly synthesis</span>
+                <strong>Ready</strong>
+              </div>
+            </article>
+          </aside>
+        </section>
+
+        <section class="card timeline" id="timeline">
+          <div class="section-head">
+            <div>
+              <p class="kicker">Reflection timeline</p>
+              <h2>Revisit the chapters quietly.</h2>
+            </div>
+          </div>
+
+          <div class="timeline-list">
+            <article class="timeline-item">
+              <div class="timeline-meta">
+                <span>Apr 28</span>
+                <span>Chapter 4</span>
+              </div>
+              <div class="timeline-copy">
+                <h3>Trying to turn uncertainty into a task.</h3>
+                <p>The writing suggests a recurring pressure to resolve feeling too quickly.</p>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <div class="timeline-meta">
+                <span>Apr 30</span>
+                <span>Chapter 5</span>
+              </div>
+              <div class="timeline-copy">
+                <h3>A moment of clarity that almost became a plan.</h3>
+                <p>Clarity appears alongside the urge to organize it immediately.</p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="card weekly" id="weekly">
+          <div class="section-head">
+            <div>
+              <p class="kicker">Weekly synthesis</p>
+              <h2>Recurring themes, tensions, and moments of clarity.</h2>
+            </div>
+            <a class="button button-secondary" href="#compose">Return to writing</a>
+          </div>
+
+          <div class="weekly-grid">
+            <div class="weekly-summary">
+              <p>
+                This week moves between pressure, clarity, and the effort to stay coherent without rushing
+                meaning. A quiet continuity appears in the way the writing returns to work, home, and the
+                question of how much to carry.
+              </p>
+            </div>
+
+            <div class="weekly-themes">
+              <span class="theme">continuity</span>
+              <span class="theme">clarity</span>
+              <span class="theme">tension</span>
+              <span class="theme">fatigue</span>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
+

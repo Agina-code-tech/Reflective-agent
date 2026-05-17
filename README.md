@@ -14,6 +14,7 @@ See [docs/reflective-memory-loop-architecture.md](docs/reflective-memory-loop-ar
 
 - Open `/lab` in the web app for a dedicated testing interface.
 - The lab includes quick navigation, sample seeding, local-memory reset, and response previews.
+- Open `/ui.html` for the standalone HTML/CSS version of the reflective UI.
 
 ## Notes
 
